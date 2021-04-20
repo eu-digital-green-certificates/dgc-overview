@@ -1,2 +1,3 @@
 # Digital Green Certificate  Overview
-General information about this project.
+
+The digital green certificate implements the EU trustframework according the specification of the eHealth Network Interoperability Subgroup (https://github.com/ehn-digital-green-development/hcert-spec). 
