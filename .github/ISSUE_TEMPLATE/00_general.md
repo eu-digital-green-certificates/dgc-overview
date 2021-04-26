@@ -2,7 +2,7 @@
 name: "General Question or Suggestion"
 about: If you have questions or suggestions that fit no other category, please use this issue type.
 labels: general
-assignees: RKlaus-tsi
+assignees: daniel-eder
 ---
 
 <!--
