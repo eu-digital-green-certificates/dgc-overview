@@ -17,10 +17,10 @@ This repository provides an overview over the EU Digital Green Certificates (DGC
 | Folder                	   | Description                                                               |
 | ------------------------- | --------------------------------------------------------------------------|
 | [guides]                		| Find general guides related to DGC               						                   |
-| [test-specifications]     | Specifications for test processes                    						               |
+<!-- | [test-specifications]     | Specifications for test processes                    						               | Note: Disabled until files are provided -->
 
-[test-specifications]: ./test-specification
 [guides]: ./guides
+[test-specifications]: ./test-specification
 
 ## About this Project
 
