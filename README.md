@@ -22,6 +22,8 @@ This repository provides an overview over the EU Digital Green Certificates (DGC
 [guides]: ./guides
 [test-specifications]: ./test-specification
 
+A list of all other repositories in this project, especially the source code repositories, can be found on our [GitHub Organization Page](https://github.com/eu-digital-green-certificates).
+
 ## About this Project
 
 The digital green certificate implements the EU trustframework according the specification of the eHealth Network Interoperability Subgroup (https://github.com/ehn-digital-green-development/hcert-spec). 
