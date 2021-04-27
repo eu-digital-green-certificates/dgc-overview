@@ -28,6 +28,8 @@ The digital green certificate implements the EU trustframework according the spe
 
 To this end the European Commission has tasked Deutsche Telekom to develop the [Digital Green Certificates Gatway](https://github.com/eu-digital-green-certificates/dgc-gateway) as well as applications that may be used by all countries connected to the gateway. These include a national backend with an issuer component ( [Issuance Service](https://github.com/eu-digital-green-certificates/dgca-issuance-service), [Issuance Web](https://github.com/eu-digital-green-certificates/dgca-issuance-web) ) and an app to validate Digital Green Certificates ( [Verifier Service](https://github.com/eu-digital-green-certificates/dgca-verifier-service), [Verifier App - Android](https://github.com/eu-digital-green-certificates/dgca-verifier-app-android), [Verifier App - iOS](https://github.com/eu-digital-green-certificates/dgca-verifier-app-ios) ) as well as a wallet app to be used by the citizens of connected countries ( [Wallet App - Android](https://github.com/eu-digital-green-certificates/dgca-wallet-app-android), [Wallet App - iOS](https://github.com/eu-digital-green-certificates/dgca-wallet-app-ios) ).
 
+Further information can be found at https://ec.europa.eu/health/ehealth/covid-19_en 
+
 ## Credits
 
 We'd like to thank all the partners who have been involved in this project from the beginning. Special mention is due to the eHealth Network Interoperability Subgroup that creates the [specification](https://github.com/ehn-digital-green-development/hcert-spec) for this project. 
