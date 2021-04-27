@@ -6,7 +6,7 @@
 The secure and trusted exchange of signature keys for digital green certificates (DGCs) between European Countries is realized by the Digital Green Certificate Gateway (DGCG) which acts as a central repository for the public keys. With the DGCG, member states are empowered to publish the public keys that they use to sign digital green certificates. Relying member states can use the DGCG to fetch up-to-date public key material on a timely basis. Later, the DGCG can be extended to exchange trustworthy supplementary information that the member states provide, like validation rules for digital green certificates.
 The trust model of the European DGC framework is a Public Key Infrastructures (PKI). Each member state utilizes one a more Country Signing Certificate Authority (CSCA). The CSCA issues public key certificates for the national Document Signers (i.e. signers for digital green certificates), which are called Document Signer Certificates (DSCs). The CSCA acts as a trust anchor such that relying member states can use the CSCA certificate to validate the authenticity and integrity of DSC certificates before providing them to their DGC validation applications. The following picture presents a high-level overview of the system.
 
-
+![Trust Model](./images/Overview.PNG)
 
 ##	1.2 Scope of Document
 Digital signatures can be used to achieve data integrity and authenticity. Public Key Infrastructures establish trust by binding public keys to verified identities. This is necessary to allow other participants to verify the data origin and the identity of the communication partner and decide about trust. In the DGCG, multiple public key certificates are used for authenticity. This document defines which public key certificates are used and how they should be designed in order to allow broad interoperability between the different member states. This document is based on [1] and [2]. It provides more details on the necessary public key certificates and it gives guidance on certificate templates and validity periods for countries that want to operate their own CSCA.
@@ -38,6 +38,8 @@ The following table contains abbreviations and terminology used throughout this 
 
 # 2	DGCG communication flows and security services
 This section gives an overview of the communication flows and security services in the DGCG system. It also defines which keys and certificates are used to protect the communication, the uploaded information, the digital green certificates, and a signed trust list that contains all onboarded CSCA certificates. The following figure gives a high-level overview of the DGCG communication flow and security services. The following sub-sections will explain the design in more detail.
+
+![Trust Model](./images/TrustModel.PNG)
 
 ## 2.1	General
 The DGCG works as a data hub that allows the exchange of signed data packages for registered EU Member States. In the current phase, the signed data packages contain the Document Signer certificates that are used by the member states. This allows other national backends to fetch them and distribute the information to their validation apps. Even if the DSCs are already signed by the CSCA, this approach allows to extend the system later to allow national backends the upload of different, generally unsigned, content (like validation rules).
@@ -89,7 +91,7 @@ After the identification and registration, the DGCG operator
 
 ## 3.2	Certificate authorities, validity periods and renewal
 In case that a member state wants to operate its own CSCA, the CSCA certificates will most probably be self-signed certificates. They act as the trust anchor of the member state and therefore the member state must strongly protect the private key corresponding to the CSCA certificate’s public key. It is recommended that the member states use an offline system for their CSCA, i.e. a computer system that is not connected to any network. Multi person control should be used to access the system (e.g. following the four eyes principle). After signing DSC, operational controls should be applied and the system that holds the private CSCA key should be stored safely with strong access controls. Hardware security modules or Smart Cards can be used to further protect the CSCA private key. 
-Validity periods
+#### Validity periods
 Digital certificates contain a validity period that enforces certificate renewal. Renewal is necessary to use fresh cryptographic keys and to adapt the key sizes when new improvements in computation or new attacks threaten the security of the cryptographic algorithm that is used.  The shell model applies (see Section 2.3).
 The following validity periods are recommended based on one-year maximum validity for digital green certificates:
 
@@ -105,6 +107,9 @@ Member states must create new upload certificates and TLS certificates timely, e
 Expired certificates shall be removed from the whitelist and trust list. 
 Member states and the DGCG operator must keep track of the validity of their own certificates. There is no central entity that keeps record of the certificate validity and informs the participants.
 The following picture shows the private key usage periods and certificate lifetimes for the recommended times in case that member states want to operate their own CSCA. Member states might define different validity periods for their certificates.
+
+![Trust Model](./images/ValidityTimes.PNG)
+
 
 ## 3.3	Revocation of certificates
 In general, digital certificates can be revoked by their issuing CA using certificate revocation lists or online certificate status responder. CSCAs for the DGC system should provide certificate revocation lists (CRLs). Even if these CRLs are currently not used by other member states (see [2, Section 5.1]), they should be integrated for future applications. In case a CSCA decides not to provide CRLs, the DSC certificates of this CSCA must be renewed when CRLs become mandatory.
