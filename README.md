@@ -10,19 +10,31 @@
     <a href="#licensing">Licensing</a>
 </p>
 
-## About this repository
+## Where can I find ... 
 
-This repository provides an overview over the EU Digital Green Certificates (DGC) project, and acts as a central storage for various useful documents related to the project. Documents are sorted by topic in the folders listed below: 
+This repository provides an overview over the EU Digital Green Certificates (DGC) project, and acts as a central storage for various useful documents related to the project. The table below acts as navigation aid to find the information you are looking for.
 
-| Folder                	   | Description                                                               |
-| ------------------------- | --------------------------------------------------------------------------|
-| [guides]                		| Find general guides related to DGC               						                   |
-<!-- | [test-specifications]     | Specifications for test processes                    						               | Note: Disabled until files are provided -->
+| Topic                   | Link                              | Description                                                                 |
+|-------------------------|-----------------------------------|-----------------------------------------------------------------------------|
+| General Discussion      |  [![Discussion](https://img.shields.io/github/issues/eu-digital-green-certificates/dgc-overview?style=flat)](/../../issues) | General Discussion and Questions regarding Digital Green Certificates.      |
+| Slack                   | [Slack Workspace], [GDC Channel]  | The Linux Foundation Public Health slack channel for developer discussions. |
+| Member State Onboarding | [dgc-participating-countries]     | Relevant Information for participating countries.                           |
+| Guides                  | [guides]                          | General guides related to DGC.                                         |
+| API Tests               | [gdc-api-tests]                   | Automated API Test Cases for GDCG.                                          |
+| Specification           | [hcert-spec]                      | Specification developed by the eHealth Network Interoperability Subgroup.   |
+| Source Code             | [DGC Github Organisation Profile] | A list of all other repositories, especially for the component source codes.   |
 
+<!--| Test Specifications     | [test-specifications]         | General test specifications.                                                             | Note: Disabled until files are provided -->
+
+[dgc-participating-countries]: https://github.com/eu-digital-green-certificates/dgc-participating-countries
+[onboarding checklist]: https://github.com/eu-digital-green-certificates/dgc-participating-countries/blob/main/gateway/OnboardingChecklist.md
 [guides]: ./guides
 [test-specifications]: ./test-specification
-
-A list of all other repositories in this project, especially the source code repositories, can be found on our [GitHub Organization Page](https://github.com/eu-digital-green-certificates).
+[gdc-api-tests]: https://github.com/eu-digital-green-certificates/dgc-api-tests
+[hcert-spec]: https://github.com/ehn-digital-green-development/hcert-spec
+[Slack Workspace]: https://lfpublichealth.slack.com
+[GDC channel]: https://lfpublichealth.slack.com/archives/C01UZFNU3M0
+[DGC Github Organisation Profile]: https://github.com/eu-digital-green-certificates
 
 ## About this Project
 
