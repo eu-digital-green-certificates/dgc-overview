@@ -25,7 +25,7 @@ This repository provides an overview over the EU Digital Green Certificates (DGC
 | EU eHealth Network      | https://ec.europa.eu/health/ehealth/covid-19_en | Further information and specifications regarding DGC.                        |
 | Source Code             | [DGC Github Organisation Profile]               | A list of all other repositories, especially for the component source codes. |
 
-<!--| Test Specifications     | [test-specifications]         | General test specifications.                                                             | Note: Disabled until files are provided -->
+<!--| Test Specifications     | [test-specifications]         | Contains specification for acceptance test on gateway-API and DGCA-E2E Tests.                                                             | Note: Disabled until files are provided -->
 
 [dgc-participating-countries]: https://github.com/eu-digital-green-certificates/dgc-participating-countries
 [onboarding checklist]: https://github.com/eu-digital-green-certificates/dgc-participating-countries/blob/main/gateway/OnboardingChecklist.md
