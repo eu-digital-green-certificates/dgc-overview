@@ -16,11 +16,11 @@ This repository provides an overview over the EU Digital Green Certificates (DGC
 
 | Topic                   | Link                              | Description                                                                 |
 |-------------------------|-----------------------------------|-----------------------------------------------------------------------------|
-| General Discussion      |  [![Discussion](https://img.shields.io/github/issues/eu-digital-green-certificates/dgc-overview?style=flat)](/../../issues) | General Discussion and Questions regarding Digital Green Certificates.      |
-| Slack                   | [Slack Workspace], [GDC Channel]  | The Linux Foundation Public Health slack channel for developer discussions. |
-| Member State Onboarding | [dgc-participating-countries]     | Relevant Information for participating countries.                           |
+| General Discussion      |  [![Discussion](https://img.shields.io/github/issues/eu-digital-green-certificates/dgc-overview?style=flat)](/../../issues) | General discussion and questions regarding Digital Green Certificates.      |
+| Slack                   | [Slack Workspace], [GDC Channel]  | The Linux Foundation Public Health Slack channel for developer discussions. |
+| Member State Onboarding | [dgc-participating-countries]     | Relevant information for participating countries.                           |
 | Guides                  | [guides]                          | General guides related to DGC.                                         |
-| API Tests               | [gdc-api-tests]                   | Automated API Test Cases for GDCG.                                          |
+| API Tests               | [gdc-api-tests]                   | Automated API test cases for GDCG.                                          |
 | Specification           | [hcert-spec]                      | Specification developed by the eHealth Network Interoperability Subgroup.   |
 | Source Code             | [DGC Github Organisation Profile] | A list of all other repositories, especially for the component source codes.   |
 
