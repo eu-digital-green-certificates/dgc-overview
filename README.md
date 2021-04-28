@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-    <a href="#about-this-repository">About this Repository</a> •
+    <a href="#where-can-i-find-">Where can I find ...</a> •
     <a href="#about-this-project">About this Project</a> •
     <a href="#credits">Credits</a> •
     <a href="#how-to-contribute">How to Contribute</a> •
