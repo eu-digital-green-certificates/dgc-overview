@@ -14,15 +14,16 @@
 
 This repository provides an overview over the EU Digital Green Certificates (DGC) project, and acts as a central storage for various useful documents related to the project. The table below acts as navigation aid to find the information you are looking for.
 
-| Topic                   | Link                              | Description                                                                 |
-|-------------------------|-----------------------------------|-----------------------------------------------------------------------------|
-| General Discussion      |  [![Discussion](https://img.shields.io/github/issues/eu-digital-green-certificates/dgc-overview?style=flat)](/../../issues) | General discussion and questions regarding Digital Green Certificates.      |
-| Slack                   | [Slack Workspace], [GDC Channel]  | The Linux Foundation Public Health Slack channel for developer discussions. |
-| Member State Onboarding | [dgc-participating-countries]     | Relevant information for participating countries.                           |
-| Guides                  | [guides]                          | General guides related to DGC.                                         |
-| API Tests               | [gdc-api-tests]                   | Automated API test cases for GDCG.                                          |
-| Specification           | [hcert-spec]                      | Specification developed by the eHealth Network Interoperability Subgroup.   |
-| Source Code             | [DGC Github Organisation Profile] | A list of all other repositories, especially for the component source codes.   |
+| Topic                   | Link                                            | Description                                                                  |
+|-------------------------|-------------------------------------------------|------------------------------------------------------------------------------|
+| General Discussion      |  [![Discussion](https://img.shields.io/github/issues/eu-digital-green-certificates/dgc-overview?style=flat)](/../../issues) | General discussion and questions regarding Digital Green Certificates. |
+| Slack                   | [Slack Workspace], [GDC Channel]                | The Linux Foundation Public Health Slack channel for developer discussions.  |
+| Member State Onboarding | [dgc-participating-countries]                   | Relevant information for participating countries.                            |
+| Guides                  | [guides]                                        | General guides related to DGC.                                               |
+| API Tests               | [gdc-api-tests]                                 | Automated API test cases for GDCG.                                           |
+| Specification           | [hcert-spec]                                    | Specification developed by the eHealth Network Interoperability Subgroup.    |
+| EU eHealth Network      | https://ec.europa.eu/health/ehealth/covid-19_en | Further information and specifications regarding GDC.                        |
+| Source Code             | [DGC Github Organisation Profile]               | A list of all other repositories, especially for the component source codes. |
 
 <!--| Test Specifications     | [test-specifications]         | General test specifications.                                                             | Note: Disabled until files are provided -->
 
