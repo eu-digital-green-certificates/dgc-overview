@@ -139,7 +139,7 @@ For digital certificates and cryptographic signatures in the DGCG context, the m
 |Signature Algorithm|	Key size	|Hash function|
 |-------------------|-----------| -------------|
 |EC-DSA| Min. 250 Bit| 	SHA-2 with an output length  ≥ 256 Bit or better 
-|RSA-PSS (recommended)<br /> RSA-PKCS#1 v1.5 (legacy) |	Min. 3000 Bit RSA Modulus (N) with a public exponent e > 2^16	| SHA-2 with an output length  ≥ 256 Bit or better
+|RSA-PSS (recommended padding)<br /> RSA-PKCS#1 v1.5 (legacy padding) |	Min. 3000 Bit RSA Modulus (N) with a public exponent e > 2^16	| SHA-2 with an output length  ≥ 256 Bit or better
 |DSA|	Min. 3000 Bit prime p, 250 Bit key q	|SHA-2 with an output length  ≥ 256 Bit or better |
 
 The recommended elliptic curve for EC-DSA is again NIST-p-256 due to its widespread implementation.
