@@ -202,7 +202,7 @@ The following table provides guidance for the national backend TLS client authen
 |Field | Value|
 |------| -----|
 |**Subject**|	**cn=\<FQDN or IP address of the NB TLS client\>**, *o=\<Provider\>*, **c= \<Member State of the NB\>**
-|**SubjectAltName**| **dnsName: \<NB DNS name\> or iPAddress: \<NB IP address\>*
+|**SubjectAltName**| **dnsName: \<NB DNS name\> or iPAddress: \<NB IP address\>**
 |**Key Usage**	| **digital signature**
 |**Extended Key Usage**|	**client authentication (1.3.6.1.5.5.7.3.2)**
 
