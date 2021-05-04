@@ -154,9 +154,9 @@ The recommended elliptic curve for EC-DSA is again NIST-p-256 due to its widespr
 The following table gives guidance on the NB<sub>CSCA</sub> certificate template in case that a member state decides to operate its own CSCA for the DGC system:
 |Field | Value|
 |------| -----|
-|**Subject**|	**cn**= \<Country\> DGC CSCA \<counter starting at 1\>, ou=\<Organizational Unit of Country\>, o=\<Provider\> ,**c=\<Member State operating the CSCA\>**, e= \<contact email\>|
-|**Key Usage**|	**digital signature, certificate signing**, CRL signing|
-|**Basic Constraints**|	**CA = true, path length constraints = 0**|
+|**Subject**|	**cn**= \<Country\> DGC CSCA \<counter starting at 1\>, ou=\<Organizational Unit of Country\>, o=\<Provider\> ,**c=\<Member State operating the CSCA\>**|
+|**Key Usage**|	**certificate signing**, CRL signing|
+|**Basic Constraints**|	**CA = true, path length constraints = 0**
 
 Countries should also include:
 
@@ -277,8 +277,8 @@ The following table provides guidance for the national backend upload certificat
 The following table provides guidance for the national backend TLS client authentication certificate.
 |Field | Value|
 |------| -----|
-|**Subject**|	**cn=\<common name of the NB\>**, ou=\<Organizational Unit of Country\>, **o=\<Provider\>**, **c= \<Member State of the NB\>**, e= \<contact email\>
-|**SubjectAltName**|**dnsName: \<NB DNS name\>**
+|**Subject**|	**cn=\<FQDN or IP address of the NB TLS client\>**, **o=\<Provider\>**, **c= \<Member State of the NB\>**
+|**SubjectAltName**|dnsName: \<NB DNS name\>, iPAddress: \<NB IP address\>
 |**Key Usage**	| **digital signature**, key encipherment
 |**Extended Key Usage**|	**server authentication (1.3.6.1.5.5.7.3.1), client authentication (1.3.6.1.5.5.7.3.2)**
 
@@ -293,8 +293,8 @@ The TLS certificate of the NB must be issued by a publicly trusted certificate a
 ## 4.7	DGCG TLS Server certificates (DGCG<sub>TLS</sub>)
 |Field | Value|
 |------| -----|
-|**Subject**|	**cn=\<Common Name of the DGCG\>**, ou=\<Organizational Unit of Country\>, o=\<Provider\> ,**c= \<country\>**, e= \<contact email\>
-|**SubjectAltName**|**dnsName: \<DGCG DNS name\>**
+|**Subject**|	**cn=\<FQDN or IP address of the DGCG\>**, **o=\<Provider\> ,**c= \<country\>**
+|**SubjectAltName**|dnsName: \<DGCG DNS name\>, iPAddress: \<DGCG IP address\>
 |**Key Usage**|	**digital signature**, key encipherment
 |**Extended Key Usage**|	**server authentication (1.3.6.1.5.5.7.3.1), client authentication (1.3.6.1.5.5.7.3.2)**
 
