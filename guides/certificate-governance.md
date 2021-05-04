@@ -175,8 +175,8 @@ Countries should also include:
 |**Key-usage period**|    **2.5.29.16: notBefore, notAfter as Generalized time**|
 |**X509v3 Authority Key Identifier**| **hash**|
 |**X509v3 Subject Key Identifier**|**keyid: hash**|
-|** X509v3 Issuer Alternative Name**|**DirName**|
-|** X509v3 Subject Alternative Name**|**DirName**|
+|**X509v3 Issuer Alternative Name**|**DirName**|
+|**X509v3 Subject Alternative Name**|**DirName**|
 
 And may also include the X509v3 CRL Distribution Points. The use of OCSP is not recommended - as this may give rise to privacy/surveilance issues.
 
