@@ -1,8 +1,3 @@
-
-
-**!Open for review to EOB 04.05.2021!**
-
-
 # Digital Green Certificate – Public Key Certificate Governance
 
 ## 1.1 Context
@@ -95,7 +90,9 @@ The Member State MUST provide three digital certificates during the registration
 -	The Member States TLS certificate NB<sub>TLS</sub> 
 -	The Member States upload certificate NB<sub>UP</sub>
 -	The Member States CSCA certificate(s) NB<sub>CSCA</sub>
-All provided certificate MUST adhere to the requirements defined in Section 4. The DGCG operator will verify that the provided certificate adheres to the requirements of Section 4. \
+
+
+All provided certificate MUST adhere to the requirements defined in Section 4. The DGCG operator will verify that the provided certificate adheres to the requirements of Section 4. <br><br>
 After the identification and registration, the DGCG operator
 -	adds the NB<sub>CSCA</sub> certificate(s) to the trust list signed with the private key that corresponds to the DGCG<sub>TA</sub> public key  
 -	adds the NB<sub>TLS</sub> certificate to the whitelist of the DGCG TLS endpoint
