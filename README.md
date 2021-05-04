@@ -4,6 +4,7 @@
 
 <p align="center">
     <a href="#where-can-i-find-">Where can I find ...</a> •
+    <a href="#architectural-overview">Architectural Overview</a> •
     <a href="#about-this-project">About this Project</a> •
     <a href="#credits">Credits</a> •
     <a href="#how-to-contribute">How to Contribute</a> •
@@ -36,6 +37,10 @@ This repository provides an overview over the EU Digital Green Certificates (DGC
 [Slack Workspace]: https://lfpublichealth.slack.com
 [DGC channel]: https://lfpublichealth.slack.com/archives/C01UZFNU3M0
 [DGC Github Organisation Profile]: https://github.com/eu-digital-green-certificates
+
+## Architectural Overview
+
+![Architectural Overview](./images/OverviewDGC.png)
 
 ## About this Project
 
