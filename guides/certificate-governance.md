@@ -151,7 +151,6 @@ The following table gives guidance on the NB<sub>CSCA</sub> certificate template
 |**Subject**|	**cn**= \<Country\> DGC CSCA \<counter starting at 1\>, ou=\<Organizational Unit of Country\>, o=\<Provider\> ,**c=\<Member State operating the CSCA\>**|
 |**Key Usage**|	**digital signature, certificate signing**, CRL signing|
 |**Basic Constraints**|	**CA = true, path length constraints = 0**
-|Subject Alternative Name| <contact email>|
 
 In accordance to [2, Section 5], the subject name must be non-empty and unique within the specified country. The country code (c) must match the country that will use this CSCA. The certificate must contain a unique subject key identifier (SKI) according to RFC 5280. 
 
