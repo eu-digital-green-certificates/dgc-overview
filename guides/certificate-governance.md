@@ -148,7 +148,7 @@ The recommended elliptic curve for EC-DSA is again NIST-p-256 due to its widespr
 The following table gives guidance on the NB<sub>CSCA</sub> certificate template in case that a member state decides to operate its own CSCA for the DGC system:
 |Field | Value|
 |------| -----|
-|**Subject**|	**cn**= \<Country\> DGC CSCA \<counter starting at 1\>, ou=\<Organizational Unit of Country\>, o=\<Provider\> ,**c=\<Member State operating the CSCA\>**, e= \<contact email\>|
+|**Subject**|	**cn**= \<Country\> DGC CSCA \<counter starting at 1\>, ou=\<Organizational Unit of Country\>, o=\<Provider\> ,**c=\<Member State operating the CSCA\>**|
 |**Key Usage**|	**certificate signing**, CRL signing|
 |**Basic Constraints**|	**CA = true, path length constraints = 0**
 
