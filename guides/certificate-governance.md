@@ -113,12 +113,14 @@ The following validity periods are recommended based on one-year maximum validit
   -	TLS Client authentication: 1 year
   
 For a timely renewal, the following usage period for the private keys are recommended:
--	CSCA: 1 year
--	DSC: 6 months
-Member states must create new upload certificates and TLS certificates timely, e.g. no later than one month, ideally at two-thirds or 3 months before (whichever is shorter) before expiration in order to allow smooth operation. CSCA and DSC should be renewed at least one month before the private key usage ends (considering the necessary operational procedures). Member states must provide updated CSCA, upload and TLS certificates to the DGCG operator. \
+-	CSCA: 1 year and 1 month
+-	DSC: 7 months
+Member states must create new upload certificates and TLS certificates timely, e.g. one month, before expiration in order to allow smooth operation. CSCA and DSC should be renewed at least one month before the private key usage ends (considering the necessary operational procedures). Member states must provide updated CSCA, upload and TLS certificates to the DGCG operator. \
 Expired certificates shall be removed from the whitelist and trust list. \
 Member states and the DGCG operator must keep track of the validity of their own certificates. There is no central entity that keeps record of the certificate validity and informs the participants. \
 The following picture shows the private key usage periods and certificate lifetimes for the recommended times in case that member states want to operate their own CSCA (assuming one-year maximum lifetime of signed documents). Member states might define different validity periods for their public key certificates.
+A lifetime of 13 months for the CSCA explicitly allows certificates to be cycled within a 6 month period taking out risks of holidays in every cycle and still allowing for the 1 month in advance upload and overlap in usage while pending verification.
+A lifetime of 7 months for the DSC explicitly allows certificates to be cycled within a 6 month period taking out risks of holidays in every cycle and still allowing for the 1 month in advance upload and overlap in usage while pending verification.
 
 ![Trust Model](./images/ValidityTimes.PNG)
 
@@ -144,9 +146,9 @@ For digital certificates and cryptographic signatures in the DGCG context, the m
 
 |Signature Algorithm|	Key size	|Hash function|
 |-------------------|-----------| -------------|
-|EC-DSA| Min. 250 Bit| 	SHA-2 with an output length  ≥ 256 Bit or better 
-|RSA-PSS (recommended padding)<br /> RSA-PKCS#1 v1.5 (legacy padding) |	Min. 3000 Bit RSA Modulus (N) with a public exponent e > 2^16	| SHA-2 with an output length  ≥ 256 Bit or better
-|DSA|	Min. 3000 Bit prime p, 250 Bit key q	|SHA-2 with an output length  ≥ 256 Bit or better |
+|EC-DSA| Min. 250 Bit| 	SHA-2 with an output length  ≥ 256 Bit 
+|RSA-PSS (recommended padding)<br /> RSA-PKCS#1 v1.5 (legacy padding) |	Min. 3000 Bit RSA Modulus (N) with a public exponent e > 2^16	| SHA-2 with an output length  ≥ 256 Bit
+|DSA|	Min. 3000 Bit prime p, 250 Bit key q	|SHA-2 with an output length  ≥ 256 Bit |
 
 The recommended elliptic curve for EC-DSA is again NIST-p-256 due to its widespread implementation.
 
@@ -157,6 +159,11 @@ The following table gives guidance on the NB<sub>CSCA</sub> certificate template
 |**Subject**|	**cn**= \<Country\> DGC CSCA \<counter starting at 1\>, ou=\<Organizational Unit of Country\>, o=\<Provider\> ,**c=\<Member State operating the CSCA\>**|
 |**Key Usage**|	**certificate signing**, CRL signing|
 |**Basic Constraints**|	**CA = true, path length constraints = 0**
+
+Extended Key Usage
+|**X509v3 Subject Alternative Name**| DirName:/L=\<ISO 3166-1 alpha-3\>
+|**X509v3 Issuer Alternative Name**| DirName:/L=\<ISO 3166-1 alpha-3\>
+|**X509v3 CRL Distribution Points**| URI:\<crl URL\>
 
 Countries should also include:
 
@@ -199,8 +206,15 @@ L=XX
 |Field | Value|
 |------| -----|
 |**Serial Number**| **unique serial number**|
-|**Subject**|	**cn=** \<non-empty and unique common name\>, ou = \<Organizational Unit of Country\>, o=\<Provider\> ,**c=\<Member State that uses this DCS\>**, e= \<contact email\>, L= \<locality\>
-|**Key Usage**|	**digital signature**
+|**Subject**|	**cn=** \<non-empty and unique common name\>, ou = \<Organizational Unit of Country\>, o=\<Provider\> ,**c=\<Member State that uses this DCS\>**, serialNumber=\<Serial\>|
+|**Key Usage**|	**digital signature**|
+
+Extended Key Usage
+|**X509v3 Subject Alternative Name**| DirName:/L=\<ISO 3166-1 alpha-3\>
+|**X509v3 Issuer Alternative Name**| DirName:/L=\<ISO 3166-1 alpha-3\>
+|**X509v3 CRL Distribution Points**| URI:\<crl URL\>
+|**Extended Key Usage**| 1.3.6.1.4.1.0.1847.2021.1.1, 1.3.6.1.4.1.0.1847.2021.1.2, 1.3.6.1.4.1.0.1847.2021.1.3
+
 
 Countries should also include an extended extendedKeyUsage entry with **zero** or more (i.e. up to 3) entries from:
 
@@ -216,6 +230,8 @@ The DSC must be signed with the private key corresponding to a CSCA certificate 
 -	Authority Key Identifier (AKI) matching the Subject Key Identifier (SKI) of the issuing CSCA certificate
 -	The certificate should contain a unique Subject Key Identifier (in accordance to RFC 5280)
 It is recommended that DSCs contain the CRL distribution point extension pointing to a certificate revocation list (according to RFC 5280) that is provided by the CSCA that issued the DSC. The DSC may contain a non-critical extended key usage with an OID that is specific to the eHealth-Network.
+- Extended Key Usage is optional, may contain 1 or more. When specified in the certificate it should be critical.
+- X509v3 Subject Alternative Name, X509v3 Issuer Alternative Name to be compatible with future use in current systems.
 
 An openssl.conf example is shown below:
 
@@ -270,7 +286,7 @@ The following table provides guidance for the national backend upload certificat
 
 |Field | Value|
 |------| -----|
-|**Subject**|	**cn**= \<non-empty and unique common name\>, ou = \<Organizational Unit of Country\>, o=\<Provider\> ,**c=\<Member State that uses this upload certificate\>**, e= \<contact email\>, L= \<locality\>
+|**Subject**|	**cn**= \<non-empty and unique common name\>, ou = \<Organizational Unit of Country\>, o=\<Provider\> ,**c=\<Member State that uses this upload certificate\>**, \<contact email\>>
 |**Key Usage**|**digital signature**
   
 ## 4.5	National Backend TLS Client Authentication (NB<sub>TLS</sub>)
@@ -280,9 +296,10 @@ The following table provides guidance for the national backend TLS client authen
 |**Subject**|	**cn=\<FQDN or IP address of the NB TLS client\>**, **o=\<Provider\>**, **c= \<Member State of the NB\>**
 |**SubjectAltName**|dnsName: \<NB DNS name\>, iPAddress: \<NB IP address\>
 |**Key Usage**	| **digital signature**, key encipherment
-|**Extended Key Usage**|	**server authentication (1.3.6.1.5.5.7.3.1), client authentication (1.3.6.1.5.5.7.3.2)**
+|**Extended Key Usage**|	**client authentication (1.3.6.1.5.5.7.3.2)**
 
 The TLS certificate of the NB must be issued by a publicly trusted certificate authority (included in all major browsers and operating systems, following the CAB-Forum baseline requirements).
+- The certificate may contain server authentication (1.3.6.1.5.5.7.3.1) but is not required.
   
 ## 4.6	Trust list signature certificate (DGCG<sub>TA</sub>)
 |Field | Value|
@@ -296,10 +313,11 @@ The TLS certificate of the NB must be issued by a publicly trusted certificate a
 |**Subject**|	**cn=\<FQDN or IP address of the DGCG\>**, **o=\<Provider\> ,**c= \<country\>**
 |**SubjectAltName**|dnsName: \<DGCG DNS name\>, iPAddress: \<DGCG IP address\>
 |**Key Usage**|	**digital signature**, key encipherment
-|**Extended Key Usage**|	**server authentication (1.3.6.1.5.5.7.3.1), client authentication (1.3.6.1.5.5.7.3.2)**
+|**Extended Key Usage**|	**server authentication (1.3.6.1.5.5.7.3.1)**
 
 The TLS certificate of the DGCG will be issued by a publicly trusted certificate authority (included in all major browsers and operating systems, following the CAB-Forum baseline requirements).
 
+- The certificate may contain client authentication (1.3.6.1.5.5.7.3.2) but is not required.
 
 
 
