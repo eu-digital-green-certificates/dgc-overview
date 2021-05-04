@@ -4,6 +4,7 @@
 
 <p align="center">
     <a href="#where-can-i-find-">Where can I find ...</a> •
+    <a href="#architectural-overview">Architectural Overview</a> •
     <a href="#about-this-project">About this Project</a> •
     <a href="#credits">Credits</a> •
     <a href="#how-to-contribute">How to Contribute</a> •
@@ -21,11 +22,12 @@ This repository provides an overview over the EU Digital Green Certificates (DGC
 | Member State Onboarding | [dgc-participating-countries]                   | Relevant information for participating countries.                            |
 | Guides                  | [guides]                                        | General guides related to DGC.                                               |
 | API Tests               | [dgc-api-tests]                                 | Automated API test cases for DGCG.                                           |
+| Test Specifications     | [test-specifications]                           | Contains specification for acceptance test on gateway-API and DGCA-E2E Tests.   | 
 | Specification           | [hcert-spec]                                    | Specification developed by the eHealth Network Interoperability Subgroup.    |
 | EU eHealth Network      | https://ec.europa.eu/health/ehealth/covid-19_en | Further information and specifications regarding DGC.                        |
 | Source Code             | [DGC Github Organisation Profile]               | A list of all other repositories, especially for the component source codes. |
 
-<!--| Test Specifications     | [test-specifications]         | Contains specification for acceptance test on gateway-API and DGCA-E2E Tests.                                                             | Note: Disabled until files are provided -->
+
 
 [dgc-participating-countries]: https://github.com/eu-digital-green-certificates/dgc-participating-countries
 [onboarding checklist]: https://github.com/eu-digital-green-certificates/dgc-participating-countries/blob/main/gateway/OnboardingChecklist.md
@@ -36,6 +38,10 @@ This repository provides an overview over the EU Digital Green Certificates (DGC
 [Slack Workspace]: https://lfpublichealth.slack.com
 [DGC channel]: https://lfpublichealth.slack.com/archives/C01UZFNU3M0
 [DGC Github Organisation Profile]: https://github.com/eu-digital-green-certificates
+
+## Architectural Overview
+
+![Architectural Overview](./images/OverviewDGC.png)
 
 ## About this Project
 
