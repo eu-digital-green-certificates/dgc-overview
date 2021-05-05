@@ -156,7 +156,7 @@ The following table gives guidance on the NB<sub>CSCA</sub> certificate template
 |Field | Value|
 |------| -----|
 |**Subject**|	**cn= \<Country\> DGC CSCA \<counter starting at 1\>**, *o=\<Provider\>* ,**c=\<Member State operating the CSCA\>**|
-|**Key Usage**|	**certificate signing**, *CRL signing*|
+|**Key Usage**|	**certificate signing**, *CRL signing*  at a minimum |
 |**Basic Constraints**|	**CA = true, path length constraints = 0**
 
 In accordance to [2, Section 5], the subject name MUST be non-empty and unique within the specified country. The country code (c) MUST match the country that will use this CSCA. The certificate MUST contain a unique subject key identifier (SKI) according to RFC 5280. 
@@ -169,7 +169,7 @@ The following table provides guidance on the DSC certificate template in accorda
 |------| -----|
 |**Serial Number**| **unique serial number**|
 |**Subject**|	**cn=\<non-empty and unique common name\>** , *o=\<Provider\>* ,**c=\<Member State that uses this DCS\>**|
-|**Key Usage**|	**digital signature**|
+|**Key Usage**|	**digital signature**  at a minimum |
 
 The DSC MUST be signed with the private key corresponding to a CSCA certificate that is used by the member state. \
 The following extension are to be used in accordance to [2, Section 5]:
@@ -192,16 +192,15 @@ The following table provides guidance for the national backend upload certificat
 |Field | Value|
 |------| -----|
 |**Subject**|	**cn= \<non-empty and unique common name\>**, *o=\<Provider\>* ,**c=\<Member State that uses this upload certificate\>**
-|**Key Usage**|**digital signature**
+|**Key Usage**|**digital signature**  at a minimum 
   
 ## 4.5	National Backend TLS Client Authentication (NB<sub>TLS</sub>)
 The following table provides guidance for the national backend TLS client authentication certificate. **Bold** entries are required (MUST be included in the certificate), *italic* entries are recommended (SHOULD be included). For absent fields, no recommendations are defined.
 |Field | Value|
 |------| -----|
-|**Subject**|	**cn=\<FQDN or IP address of the NB TLS client\>**, *o=\<Provider\>*, **c= \<Member State of the NB\>**
-|**SubjectAltName**| **dnsName: \<NB DNS name\> or iPAddress: \<NB IP address\>**
+|**Subject**|	**cn=\<Human readable identifier for the NB TLS client\>**, *o=\<Provider\>*, **c= \<Member State of the NB\>**
 |**Key Usage**	| **digital signature**
-|**Extended Key Usage**|	**client authentication (1.3.6.1.5.5.7.3.2)**
+|**Extended Key Usage**|	**client authentication (1.3.6.1.5.5.7.3.2)** at a minimum 
 
 - The certificate MAY contain the extended key usage *server authentication (1.3.6.1.5.5.7.3.1)* but is not required.
   
@@ -219,7 +218,7 @@ The following table defines the DGCG TLS certificate.
 |**Subject**|	**cn=\<FQDN or IP address of the DGCG\>**, **o=\<Provider\>** ,**c= \<country\>**
 |**SubjectAltName**| **dnsName: \<DGCG DNS name\> or iPAddress: \<DGCG IP address\>**
 |**Key Usage**|	**digital signature**
-|**Extended Key Usage**|	**server authentication (1.3.6.1.5.5.7.3.1)**
+|**Extended Key Usage**|	**server authentication (1.3.6.1.5.5.7.3.1)**  at a minimum 
 
 - The certificate MAY contain the extended key usage *client authentication (1.3.6.1.5.5.7.3.2)* but is not required.
 
