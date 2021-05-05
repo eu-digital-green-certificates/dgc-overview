@@ -198,7 +198,7 @@ The following table provides guidance for the national backend upload certificat
 The following table provides guidance for the national backend TLS client authentication certificate. **Bold** entries are required (MUST be included in the certificate), *italic* entries are recommended (SHOULD be included). For absent fields, no recommendations are defined.
 |Field | Value|
 |------| -----|
-|**Subject**|	**cn=\<unique common name\>**, *o=\<Provider\>*, **c= \<Member State of the NB\>**
+|**Subject**|	**cn=\<non-empty and unique common name\>**, *o=\<Provider\>*, **c= \<Member State of the NB\>**
 |**Key Usage**| **digital signature** (at minumum)
 |**Extended Key Usage**|	**client authentication (1.3.6.1.5.5.7.3.2)**
 
