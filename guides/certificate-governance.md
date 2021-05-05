@@ -125,7 +125,7 @@ The following picture shows the private key usage periods and certificate lifeti
 Member states might define different validity periods for their public key certificates.
 
 ## 3.3	Revocation of certificates
-In general, digital certificates can be revoked by their issuing CA using certificate revocation lists or online certificate status responder. CSCAs for the DGC system SHOULD provide certificate revocation lists (CRLs). Even if these CRLs are currently not used by other member states (see [2, Section 5.1]), they SHOULD be integrated for future applications. In case a CSCA decides not to provide CRLs, the DSC certificates of this CSCA must be renewed when CRLs become mandatory. CSCA SHOULD NOT use the online certificate status protocol (OCSP) for their DSCs, due to privacy concerns and verifiers SHOULD NOT expect OCSP for validation of the DSCs. \
+In general, digital certificates can be revoked by their issuing CA using certificate revocation lists or online certificate status responder. CSCAs for the DGC system SHOULD provide certificate revocation lists (CRLs). Even if these CRLs are currently not used by other member states (see [2, Section 5.1]), they SHOULD be integrated for future applications. In case a CSCA decides not to provide CRLs, the DSC certificates of this CSCA must be renewed when CRLs become mandatory. A CSCA SHOULD NOT use the Online Certificate Status Protocol (OCSP) for their DSCs, due to privacy concerns. Verifiers MUST NOT use OCSP for validation of the DSCs and SHOULD use CRLs. \
 Member states can remove their DSCs from the DGCG on their own using valid upload and TLS certificates. It must be noted that removing a DSC certificate will mean that all DGCs issued with this DSC will become invalid when member states fetch the updated DSC lists. Clearly, the protection of private key material corresponding to DSCs is crucial. \
 Member States MUST inform the DGCG operator when they must revoke upload or TLS certificates, for example due to compromise of the national backend. The DGCG operator can then remove the trust for the affected certificate, e.g. by removing it from the TLS whitelist. The DGCG operator can remove the upload certificates from the DGCG database. Packages signed with the private key corresponding to this upload certificate will become invalid when national backends remove the trust of the revoked upload certificate.  \
 In case that a CSCA must be revoked, member states SHALL inform the DGCG operator as well as other member states that they have trust relationships with.  The DGC operater will issue a new trust list where the affected certificate is not contained anymore. All DSCs issued by this CSCA will become invalid when member states update their national backend trust store. \
@@ -156,7 +156,7 @@ The following table gives guidance on the NB<sub>CSCA</sub> certificate template
 |Field | Value|
 |------| -----|
 |**Subject**|	**cn= \<Country\> DGC CSCA \<counter starting at 1\>**, *o=\<Provider\>* ,**c=\<Member State operating the CSCA\>**|
-|**Key Usage** (at minumum)|	**certificate signing**, *CRL signing*|
+|**Key Usage** |	**certificate signing**, *CRL signing* (at minumum)|
 |**Basic Constraints**|	**CA = true, path length constraints = 0**
 
 In accordance to [2, Section 5], the subject name MUST be non-empty and unique within the specified country. The country code (c) MUST match the country that will use this CSCA. The certificate MUST contain a unique subject key identifier (SKI) according to RFC 5280. 
@@ -169,7 +169,7 @@ The following table provides guidance on the DSC certificate template in accorda
 |------| -----|
 |**Serial Number**| **unique serial number**|
 |**Subject**|	**cn=\<non-empty and unique common name\>** , *o=\<Provider\>* ,**c=\<Member State that uses this DCS\>**|
-|**Key Usage** (at minumum)|	**digital signature**|
+|**Key Usage** |	**digital signature** (at minumum)|
 
 The DSC MUST be signed with the private key corresponding to a CSCA certificate that is used by the member state. \
 The following extension are to be used in accordance to [2, Section 5]:
@@ -192,24 +192,24 @@ The following table provides guidance for the national backend upload certificat
 |Field | Value|
 |------| -----|
 |**Subject**|	**cn= \<non-empty and unique common name\>**, *o=\<Provider\>* ,**c=\<Member State that uses this upload certificate\>**
-|**Key Usage** (at minumum)|**digital signature**
+|**Key Usage** |**digital signature** (at minumum)
   
 ## 4.5	National Backend TLS Client Authentication (NB<sub>TLS</sub>)
 The following table provides guidance for the national backend TLS client authentication certificate. **Bold** entries are required (MUST be included in the certificate), *italic* entries are recommended (SHOULD be included). For absent fields, no recommendations are defined.
 |Field | Value|
 |------| -----|
 |**Subject**|	**cn=\<unique common name\>**, *o=\<Provider\>*, **c= \<Member State of the NB\>**
-|**Key Usage**(at minumum)| **digital signature**
+|**Key Usage**| **digital signature** (at minumum)
 |**Extended Key Usage**|	**client authentication (1.3.6.1.5.5.7.3.2)**
 
-- The certificate MAY contain the extended key usage *server authentication (1.3.6.1.5.5.7.3.1)* but is not required.
+- The certificate MAY also contain the extended key usage *server authentication (1.3.6.1.5.5.7.3.1)* but is not required.
   
 ## 4.6	Trust list signature certificate (DGCG<sub>TA</sub>)
 The following table defines the DGCG Trust Anchor certificate.
 |Field | Value|
 |------| -----|
 |**Subject**|	**cn= Digital Green Certificate Gateway, o=\<Provider\> , c=\<country\>**
-|**Key Usage** (at minumum)|**digital signature**
+|**Key Usage** |**digital signature** (at minumum)
 
 ## 4.7	DGCG TLS Server certificates (DGCG<sub>TLS</sub>)
 The following table defines the DGCG TLS certificate.
@@ -217,10 +217,10 @@ The following table defines the DGCG TLS certificate.
 |------| -----|
 |**Subject**|	**cn=\<FQDN or IP address of the DGCG\>**, **o=\<Provider\>** ,**c= \<country\>**
 |**SubjectAltName**| **dnsName: \<DGCG DNS name\> or iPAddress: \<DGCG IP address\>**
-|**Key Usage** (at minumum)|	**digital signature**
+|**Key Usage** |	**digital signature** (at minumum)
 |**Extended Key Usage**|	**server authentication (1.3.6.1.5.5.7.3.1)**
 
-- The certificate MAY contain the extended key usage *client authentication (1.3.6.1.5.5.7.3.2)* but is not required.
+- The certificate MAY also contain the extended key usage *client authentication (1.3.6.1.5.5.7.3.2)* but is not required.
 
 The TLS certificate of the DGCG will be issued by a publicly trusted certificate authority (included in all major browsers and operating systems, following the CAB-Forum baseline requirements).
 
