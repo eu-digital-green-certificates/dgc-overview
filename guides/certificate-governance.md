@@ -161,9 +161,9 @@ The following table gives guidance on the NB<sub>CSCA</sub> certificate template
 
 In accordance to [2, Section 5], the subject name MUST be non-empty and unique within the specified country. The country code (c) MUST match the country that will use this CSCA. The certificate MUST contain a unique subject key identifier (SKI) according to RFC 5280. 
 
-## 4.3	Document Signer (NB<sub>DSC</sub>)
+## 4.3	Document Signer (DSC)
 
-The following table provides guidance on the NB<sub>DSC</sub> certificate template in accordance to [2, Section 5]. **Bold** entries are required (MUST be included in the certificate), *italic* entries are recommended (SHOULD be included). For absent fields, no recommendations are defined.
+The following table provides guidance on the DSC certificate template in accordance to [2, Section 5]. **Bold** entries are required (MUST be included in the certificate), *italic* entries are recommended (SHOULD be included). For absent fields, no recommendations are defined.
 
 |Field | Value|
 |------| -----|
