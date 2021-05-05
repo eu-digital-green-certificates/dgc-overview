@@ -186,6 +186,12 @@ The following extensions are to be used as defined in [2, Appendix A4]. Countrie
 |extendedKeyUsage|    1.3.6.1.4.1.0.1847.2021.1.2 for Vacination Issuers
 |extendedKeyUsage|    1.3.6.1.4.1.0.1847.2021.1.3 for Recovery Issuers
 
+### 4.3.1 CRL and (no) OCSP
+
+Memberstates may include CRL distribution points, but **SHOULD** not include any OCSP endpoints. The reason for this is that such would allow for surveilance. Eg. if certain individuals are signed by relatively rarely used DSC certificates (or a rogue DSC is inserted late in the supply chain). As this would allow an observer of the OCSP endpoint to see the appearance of that specific DGC signed by that _special_ DSC.
+
+For the same reason - verifiers **MUST** not do any OCSP verificiation. And Memberstates **SHOULD** apply any CRL filtering they do in bulk and centrally; and prior to making the resulting trust field available to the verifiers in the field.
+
 ## 4.4	Upload Certificates (NB<sub>UP</sub>)
 The following table provides guidance for the national backend upload certificate. **Bold** entries are required (MUST be included in the certificate), *italic* entries are recommended (SHOULD be included). For absent fields, no recommendations are defined.
 
