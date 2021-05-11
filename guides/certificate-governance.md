@@ -205,6 +205,8 @@ The following table provides guidance for the national backend TLS client authen
 |**Extended Key Usage**|	**client authentication (1.3.6.1.5.5.7.3.2)**
 
 - The certificate MAY also contain the extended key usage *server authentication (1.3.6.1.5.5.7.3.1)* but is not required.
+
+Beware that self-signed certificates should also contain the key usage *Certificate signing* (`keyCertSign`), so that OpenSSL can verify the (self) signature of the certificate.
   
 ## 4.6	Trust list signature certificate (DGCG<sub>TA</sub>)
 The following table defines the DGCG Trust Anchor certificate.
