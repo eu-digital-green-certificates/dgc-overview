@@ -188,7 +188,7 @@ The following extensions are to be used as defined in [2, Appendix A4]. Countrie
 |extendedKeyUsage|    1.3.6.1.4.1.1847.2021.1.2 for Vacination Issuers
 |extendedKeyUsage|    1.3.6.1.4.1.1847.2021.1.3 for Recovery Issuers
 
-These values are defined as non critical, therefore all applications should handle new and/or unknown gracefully.
+These values are defined as non critical, therefore all applications should handle new and/or unknown OIDs gracefully.
 
 ## 4.4	Upload Certificates (NB<sub>UP</sub>)
 The following table provides guidance for the national backend upload certificate. **Bold** entries are required (MUST be included in the certificate), *italic* entries are recommended (SHOULD be included). For absent fields, no recommendations are defined.
