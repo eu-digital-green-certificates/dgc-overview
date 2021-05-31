@@ -1,5 +1,5 @@
 <h1 align="center">
- Digital Green Certificate: Overview
+ EU Digital COVID Certificate: Overview
 </h1>
 
 <p align="center">
@@ -13,7 +13,7 @@
 
 ## Where can I find ... 
 
-This repository provides an overview over the EU Digital Green Certificates (DGC) project, and acts as a central storage for various useful documents related to the project. The table below acts as navigation aid to find the information you are looking for.
+This repository provides an overview over the EU Digital COVID Certificate (DGC) project, and acts as a central storage for various useful documents related to the project. The table below acts as navigation aid to find the information you are looking for.
 
 | Topic                   | Link                                            | Description                                                                  |
 |-------------------------|-------------------------------------------------|------------------------------------------------------------------------------|
