@@ -26,6 +26,8 @@ This repository provides an overview over the EU Digital COVID Certificate (DGC)
 | Specification           | [hcert-spec]                                    | Specification developed by the eHealth Network Interoperability Subgroup.    |
 | EU eHealth Network      | https://ec.europa.eu/health/ehealth/covid-19_en | Further information and specifications regarding DGC.                        |
 | Source Code             | [DGC Github Organisation Profile]               | A list of all other repositories, especially for the component source codes. |
+| DCC Debugging           | [DCC Credential Debugger]                       | The prefixed version of the base45 can be added to read the content of a DCC |
+| DCC Debugging           | [CBOR Debugger]                                 | The Binary Content of the COSE Payload can be debugged in this tool. 
 
 
 
@@ -38,6 +40,8 @@ This repository provides an overview over the EU Digital COVID Certificate (DGC)
 [Slack Workspace]: https://lfpublichealth.slack.com
 [DGC channel]: https://lfpublichealth.slack.com/archives/C01UZFNU3M0
 [DGC Github Organisation Profile]: https://github.com/eu-digital-green-certificates
+[DCC Credential Debugger]: https://github.pathcheck.org/debug.html
+[CBOR Debugger]: http://cbor.me/
 
 ## Architectural Overview
 
