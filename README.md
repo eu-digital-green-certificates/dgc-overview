@@ -55,7 +55,7 @@ To this end the European Commission has tasked Deutsche Telekom and SAP to devel
 
 Further information can be found at https://ec.europa.eu/health/ehealth/covid-19_en 
 
-**A note on using the apps and released APK files found in this GitHub organization**: The apps are reference implementations that cannot be used in production environments as-is, but rather need to be configured by EU member states to access their national backends. 
+**A note on using the apps and released APK files found in this GitHub organization**: The apps are reference implementations that cannot be used in production environments as-is, but rather need to be configured by EU member states to access their national backends. The released APK files are configured to work with the test environments and will not report correct results on "live" DCCs.
 
 ## Credits
 
