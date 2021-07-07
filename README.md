@@ -55,6 +55,8 @@ To this end the European Commission has tasked Deutsche Telekom and SAP to devel
 
 Further information can be found at https://ec.europa.eu/health/ehealth/covid-19_en 
 
+**A note on using the apps and released APK files found in this GitHub organization**: The apps are reference implementations that cannot be used in production environments as-is, but rather need to be configured by EU member states to access their national backends. 
+
 ## Credits
 
 We'd like to thank all the partners who have been involved in this project from the beginning. Special mention is due to the eHealth Network Interoperability Subgroup that creates the [specification](https://github.com/ehn-digital-green-development/hcert-spec) for this project. 
