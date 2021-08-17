@@ -37,7 +37,7 @@ This repository provides an overview over the EU Digital COVID Certificate (DGC)
 [test-specifications]: ./test-specification
 [dgc-api-tests]: https://github.com/eu-digital-green-certificates/dgc-api-tests
 [hcert-spec]: https://github.com/ehn-digital-green-development/hcert-spec
-[Slack Workspace]: https://lfpublichealth.slack.com
+[Slack Workspace]: https://join.slack.com/t/lfpublichealth/shared_invite/zt-e9vj5tl2-DFJ6z~q0Y6_Tm_SZVymctw
 [DGC channel]: https://lfpublichealth.slack.com/archives/C01UZFNU3M0
 [DGC Github Organisation Profile]: https://github.com/eu-digital-green-certificates
 [DCC Credential Debugger]: https://github.pathcheck.org/debug.html
