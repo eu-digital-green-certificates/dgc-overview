@@ -18,7 +18,7 @@ This repository provides an overview over the EU Digital COVID Certificate (DGC)
 | Topic                   | Link                                            | Description                                                                  |
 |-------------------------|-------------------------------------------------|------------------------------------------------------------------------------|
 | General Discussion      |  [![Discussion](https://img.shields.io/github/issues/eu-digital-green-certificates/dgc-overview?style=flat)](/../../issues) | General discussion and questions regarding Digital Green Certificates. |
-| Slack                   | [Slack Workspace], [DGC Channel]                | The Linux Foundation Public Health Slack channel for developer discussions.  |
+| Slack                   | [Slack Workspace Invite], [DGC Channel]                | The Linux Foundation Public Health Slack channel for developer discussions.  |
 | Member State Onboarding | [dgc-participating-countries]                   | Relevant information for participating countries.                            |
 | Guides                  | [guides]                                        | General guides related to DGC.                                               |
 | API Tests               | [dgc-api-tests]                                 | Automated API test cases for DGCG.                                           |
