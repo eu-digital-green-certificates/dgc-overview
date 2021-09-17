@@ -1,14 +1,18 @@
-# Responsible Disclosure Statement
+# EU Digital Covid Certificates Vulnerability Disclosure Policy (VDP)
 
-The security of our systems is top priority. No  matter how much effort we put into system security, there might be  vulnerabilities present. If you discover a vulnerability, we would like  to know about it so we can take steps to address it. We would like to  ask you to help us protect our users and our systems.
+The security of our systems is top priority. No  matter how much effort we put into system security, there might be vulnerabilities present. If you discover a vulnerability, we would like  to know about it so we can take steps to address it. We would like to  ask you to help us protect our users and our systems.
 
-## Please do the following:
+## Scope 
+- EU DCC Gateway
+- EU DCC Applications
+- Source code in [eu-digital-green-certificates](https://github.com/eu-digital-green-certificates) repositories
 
-Submit your findings via email email:
+## If you have identified a vulnerability, please do the following:
 
-        EU DCC Security <dcc-security@eu.europa.com>
-
-And reference the "EU DCC Security Committee" in your report.
+* E-mail your findings to EU DCC Security <dcc-security@eu.europa.com>, specifying whether or not you agree to your name or pseudonym being made publicly available as the discoverer of the problem.
+* Encrypt your findings using our PGP key to prevent this critical information from falling into the wrong hands.
+* Provide your report in English, preferably, or in any other official language of the European Union.
+* Inform us if you agree to make your name/pseudonym publicly available as the discoverer of the vulnerability. 
 
 Please do not publicly disclose these details without contacting us first. In return we will
 investigate all received vulnerability reports and, where needed, will take appropriate action
@@ -17,10 +21,9 @@ as soon as is warranted.
 In most cases this will be a workaround/mitigation first, followed by a fix and finally a public disclosure (and CVE number/report at MITRE).
 
 ## Do's:
-
 - Report the vulnerability as quickly as is reasonably possible, to minimise the risk of hostile actors finding it and taking advantage of  it.
 - Report in a manner that safeguards the confidentiality of the report so that others do not gain access to the information.
-- Provide sufficient information to reproduce the problem, so we will  be able to resolve it. Usually, the IP address or the URL of the  affected system and a description of the vulnerability will be  sufficient. But complex vulnerabilities may require further explanation.
+- Provide us sufficient information to reproduce the problem so that we can resolve it as quickly as possible. Usually, the IP address or the URL of the affected system and a description of the vulnerability will be sufficient, but complex vulnerabilities may require further explanation in terms of technical information or potential proof-of-concept code.
 
 ## Don'ts:
 
