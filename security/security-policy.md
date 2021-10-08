@@ -9,7 +9,7 @@ The security of our systems is top priority. No  matter how much effort we put i
 
 ## If you have identified a vulnerability, please do the following:
 
-* E-mail your findings to EU DCC Operations <CNECT-DGC-OPERATIONS@ec.europa.eu>, specifying whether or not you agree to your name or pseudonym being made publicly available as the discoverer of the problem.
+* E-mail your findings to T-Systems Operations <cloud-products@telekom.de>, specifying whether or not you agree to your name or pseudonym being made publicly available as the discoverer of the problem.
 * Encrypt your findings using our PGP key to prevent this critical information from falling into the wrong hands.
 * Provide your report in English, preferably, or in any other official language of the European Union.
 * Inform us if you agree to make your name/pseudonym publicly available as the discoverer of the vulnerability. 
