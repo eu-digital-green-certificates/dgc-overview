@@ -1,6 +1,5 @@
 # EU Digital Covid Certificates Vulnerability Disclosure Policy (VDP)
-
-The security of our systems is top priority. No  matter how much effort we put into system security, there might be vulnerabilities present. If you discover a vulnerability, we would like  to know about it so we can take steps to address it. We would like to  ask you to help us protect our users and our systems.
+At the European Commission, we treat the security of our Communication and Information Systems as a top priority, in line with Commission Decision EC 2017/46. However, vulnerabilities can never be completely eliminated, despite all efforts. If exploited, such vulnerabilities can harm the confidentiality, integrity or availability of the Commission's systems and of the information processed therein. To identify and remediate vulnerabilities as soon as possible, we value the input of external entities acting in good faith, and we encourage responsible vulnerability research and disclosure. This document sets out our definition of good faith in the context of finding and reporting vulnerabilities, as well as what you can expect from us in return.
 
 ## Scope 
 - EU DCC Gateway
@@ -8,41 +7,31 @@ The security of our systems is top priority. No  matter how much effort we put i
 - Source code in [eu-digital-green-certificates](https://github.com/eu-digital-green-certificates) repositories
 
 ## If you have identified a vulnerability, please do the following:
-
-* E-mail your findings to XXXX Operations <xxx@xxx.xx>, specifying whether or not you agree to your name or pseudonym being made publicly available as the discoverer of the problem.
+* E-mail your findings to EC-VULNERABILITY-DISCLOSURE@ec.europa.eu, specifying whether or not you agree to your name or pseudonym being made publicly available as the discoverer of the problem.
 * Encrypt your findings using our PGP key to prevent this critical information from falling into the wrong hands.
+* Provide us sufficient information to reproduce the problem so that we can resolve it as quickly as possible. Usually, the IP address or the URL of the affected system and a description of the vulnerability will be sufficient, but complex vulnerabilities may require further explanation in terms of technical information or potential proof-of-concept code.
 * Provide your report in English, preferably, or in any other official language of the European Union.
-* Inform us if you agree to make your name/pseudonym publicly available as the discoverer of the vulnerability. 
+* Inform us if you agree to make your name/pseudonym publicly available as the discoverer of the vulnerability.
 
-Please do not publicly disclose these details without contacting us first. In return we will
-investigate all received vulnerability reports and, where needed, will take appropriate action
-as soon as is warranted. 
-
-In most cases this will be a workaround/mitigation first, followed by a fix and finally a public disclosure (and CVE number/report at MITRE).
-
-## Do's:
-- Report the vulnerability as quickly as is reasonably possible, to minimise the risk of hostile actors finding it and taking advantage of  it.
-- Report in a manner that safeguards the confidentiality of the report so that others do not gain access to the information.
-- Provide us sufficient information to reproduce the problem so that we can resolve it as quickly as possible. Usually, the IP address or the URL of the affected system and a description of the vulnerability will be sufficient, but complex vulnerabilities may require further explanation in terms of technical information or potential proof-of-concept code.
-
-## Don'ts:
-
-- Reveal the vulnerability or problem to others until it is resolved.
-- Build your own backdoor in an information system with the intention  of then using it to demonstrate the vulnerability, because doing so can  cause additional damage and create unnecessary security risks.
-- Utilise a vulnerability further than necessary to establish its existence.
-- Copy, modify or delete data on the system. An alternative for doing so is making a directory listing of the system.
-- Make changes to the system.
-- Repeatedly gain access to the system or sharing access with others.
-- Use brute force attacks, attacks on physical security, social  engineering, distributed denial of service, spam or applications of  third parties to gain access to the system.
+## Please do not do the followin
+* Do not take advantage of the vulnerability or problem you have discovered, for example by downloading more data than necessary to demonstrate the vulnerability, deleting, or modifying other people’s data.
+* Do not reveal any data downloaded during the discovery to any other parties.
+* Do not reveal the problem to others until it has been resolved.
+* Do not perform the following actions:
+    * Placing malware (virus, worm, Trojan horse, etc.) within the system.
+    * Reading, copying, modifying or deleting data from the system.
+    * Making changes to the system.
+    * Repeatedly accessing the system or sharing access with others.
+    * Using any access obtained to attempt to access other systems.
+    * Changing access rights for any other users.
+    * Using automated scanning tools.
+    * Using the so-called "brute force" of access to the system.
+    * Using denial-of-service or social engineering (phishing, vishing, spam etc.).
+* Do not use attacks on physical security.
 
 ## What we promise:
-
-- We strive to respond to your report within 1 business days with our evaluation of the report and an expected resolution date. We will adhere to the NCSC.nl policy of a 60 day disclose and publish. 
-- If you have followed the instructions above, we will not take any legal action against you concerning the report.
-- We will not pass on your personal details to third parties without your permission, unless it is necessary to comply with a legal  obligation. Reporting under a pseudonym or anonymous is possible.
-- We will keep you informed of the progress towards resolving the problem.
-- In the public information concerning the reported problem, we will  give your name as the discoverer of the problem (unless you desire  otherwise).
-
-We strive to resolve all problems as quickly as possible, and we would like to play an active role in the ultimate publication on the  problem after it is resolved.
-
-This Responsible Disclosure policy is based on an example written by Floor Terra and the [Responsible Disclosure Guideline of the NCSC](https://english.ncsc.nl/publications/publications/2019/juni/01/coordinated-vulnerability-disclosure-the-guideline). 
+* We will respond to your report within three business days with our evaluation of the report.
+* We will handle your report with strict confidentiality.
+* Where possible, we will inform you when the vulnerability has been remedied.
+* We will process the personal data that you provide (such as your e-mail address and name) in accordance with the applicable data protection legislation and will not pass on your personal  details to third parties without your permission.
+* In the public information concerning the problem reported, we will publish your name as the  discoverer of the problem if you have agreed to this in your initial e-mail
