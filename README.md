@@ -47,6 +47,19 @@ This repository provides an overview over the EU Digital COVID Certificate (DGC)
 
 ![Architectural Overview](./images/OverviewDGC.png)
 
+## Supported Certificate Types
+
+The current verifier and wallet apps are supporting for verification and storing: 
+- [x] DCC 
+- [x] Smart Health Cards (https://smarthealth.cards/en/)
+- [x] Verifiable Credentials (https://www.w3.org/TR/vc-data-model/, JWT Encoding)
+- [ ] ICAO
+- [ ] DIVOC
+
+Other formats are prepared but not yet implemented. For establishing the trustlist, the verifier service shares a list of trusted issuer links, downloaded from the gateway [Verifier Service](https://github.com/eu-digital-green-certificates/dgca-verifier-service)
+
+Reference Document: [Verifiable Credentials](https://github.com/eu-digital-green-certificates/dgc-overview/blob/main/guides/VerifiableCredentials.md)
+
 ## About this Project
 
 The digital green certificate implements the EU trustframework according the specification of the eHealth Network Interoperability Subgroup (https://github.com/ehn-digital-green-development/hcert-spec). 
