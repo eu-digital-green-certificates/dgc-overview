@@ -28,6 +28,7 @@ This repository provides an overview over the EU Digital COVID Certificate (DGC)
 | Source Code             | [DGC Github Organisation Profile]               | A list of all other repositories, especially for the component source codes. |
 | DCC Debugging           | [DCC Credential Debugger]                       | The prefixed version of the base45 can be added to read the content of a DCC |
 | DCC Debugging           | [CBOR Debugger]                                 | The Binary Content of the COSE Payload can be debugged in this tool. 
+| DCC Debugging           | [DCC Info]                                 | QR-Code scanner with DCC decoder 
 
 
 
@@ -42,6 +43,7 @@ This repository provides an overview over the EU Digital COVID Certificate (DGC)
 [DGC Github Organisation Profile]: https://github.com/eu-digital-green-certificates
 [DCC Credential Debugger]: https://github.pathcheck.org/debug.html
 [CBOR Debugger]: http://cbor.me/
+[DCC Info]: https://github.com/chrloch/dcc-info
 
 ## Architectural Overview
 
