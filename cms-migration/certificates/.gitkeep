@@ -1,0 +1,3 @@
+this folder is supposed to contain: 
+ - auth.pem + key_auth.pem        (TLS/Auth certificate + key)
+ - upload.pem + key_upload.pem    (UPLOAD certificate + key)
