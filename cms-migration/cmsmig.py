@@ -35,6 +35,7 @@ from cryptography import x509
 from argparse import ArgumentParser
 from base64 import b64encode, b64decode
 from cryptography.hazmat.primitives import hashes, serialization
+from cryptography.hazmat.primitives.serialization import pkcs7
 
 def main(args):
     if not args.environment.upper() in baseurls: 
